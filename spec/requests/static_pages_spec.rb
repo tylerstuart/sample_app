@@ -36,4 +36,16 @@ describe "StaticPages" do
     		page.should have_selector('title', :text => "Smoken Recipes | About Us")
     	end
     end
+
+    describe "Contact page" do
+    	it "should have the content 'Contact Us" do
+    		visit '/static_pages/contact'
+    		page.should have_content('Contact')
+    	end
+
+    	it "should have the right title" do
+    		visit '/static_pages/contact'
+    		page.should have_selector('title', :text => "Smoken Recipes | Contact")
+    	end
+    end
 end
